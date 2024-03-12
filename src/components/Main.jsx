@@ -1,13 +1,21 @@
-import { useRef } from "react";
+import { forwardRef } from "react";
 
-export default function Main({ onClick }) {
-  const item = useRef();
+const Main = forwardRef(function Main({ onClick }, ref) {
 
   return (
     <>
-      <input ref={item} type="text" /> <br />
+      <input
+        ref={ref}
+        placeholder="Write here..."
+        className="inputMain"
+        type="text"
+      />{" "}
       <br />
-      <button onClick={() => onClick(item.current.value)}>Enviar</button>
+      <br />
+
+      <button onClick={() => onClick(ref.current.value)}>Send</button>
     </>
   );
-}
+})
+
+export default Main;

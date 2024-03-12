@@ -31,12 +31,17 @@ export default function Lista({ dados, onDelete, onEdit }) {
                 defaultValue={dado.item}
               ></input>
             )}
-            <button className="floatR">
-              <img onClick={() => onDelete(dado.idTodo)} src={img} alt="" />
-            </button>
-            <button onClick={() => handleEdit(dado.idTodo)} className="floatR">
-              {!isEditing ? "Edit" : "Save"}
-            </button>
+            <div className="botoes">
+              <div className="imgBox">
+                <img onClick={() => onDelete(dado.idTodo)} src={img} alt="" />
+              </div>
+              <button
+                onClick={() => handleEdit(dado.idTodo)}
+                className="floatR"
+              >
+                {!isEditing ? "Edit" : "Save"}
+              </button>
+            </div>
           </div>
         ))}
     </>

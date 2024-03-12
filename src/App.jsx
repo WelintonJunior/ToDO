@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 //Components
 import Header from "./components/Header.jsx";
@@ -15,6 +15,11 @@ import {
 
 function App() {
   const [dados, setDados] = useState([]);
+  const input = useRef();
+
+  function clear() {
+    input.current.value = "";
+  }
 
   useEffect(() => {
     PesquisarDados();
@@ -33,6 +38,7 @@ function App() {
     cadastrar(item);
     setTimeout(() => {
       PesquisarDados();
+      clear();
     }, 100);
   }
 
@@ -58,7 +64,7 @@ function App() {
     <>
       <div className="box">
         <Header />
-        <Main onClick={handleEnviar} />
+        <Main onClick={handleEnviar} ref={input} />
       </div>
       <div className="list">
         <Lista dados={dados} onDelete={handleDelete} onEdit={handleEdit} />
