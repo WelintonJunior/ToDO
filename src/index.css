@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+button {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 1s;
+  background-color: white;
+  color: black;
+}
+
+.list {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.dadoLi {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+.floatR {
+  float: right;
+  padding: 1px;
+  margin-right: 3px;
+}
+
+.inputDado {
+  width: 100px;
+}
