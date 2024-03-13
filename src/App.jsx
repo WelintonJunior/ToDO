@@ -35,16 +35,11 @@ function App() {
   //cadastrar
 
   async function handleEnviar(item) {
-    if (item === "") {
-      alert("Insira um valor diferente de vazio!");
-      return;
-    } else {
-      cadastrar(item);
-      setTimeout(() => {
-        PesquisarDados();
-        clear();
-      }, 100);
-    }
+    cadastrar(item);
+    setTimeout(() => {
+      PesquisarDados();
+      clear();
+    }, 100);
   }
 
   //deletar
@@ -59,15 +54,10 @@ function App() {
   //editar
 
   async function handleEdit(item, idTodo) {
-    if (item === "") {
-      alert("Insira um valor diferente de vazio!");
-      return;
-    } else {
-      editar(item, idTodo);
-      setTimeout(() => {
-        PesquisarDados();
-      }, 100);
-    }
+    editar(item, idTodo);
+    setTimeout(() => {
+      PesquisarDados();
+    }, 100);
   }
 
   return (

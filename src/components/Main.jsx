@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 const Main = forwardRef(function Main({ onClick }, ref) {
+
   return (
     <>
       <input
@@ -11,9 +12,10 @@ const Main = forwardRef(function Main({ onClick }, ref) {
       />{" "}
       <br />
       <br />
+
       <button onClick={() => onClick(ref.current.value)}>Send</button>
     </>
   );
-});
+})
 
 export default Main;
